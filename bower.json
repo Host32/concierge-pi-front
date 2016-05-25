@@ -1,0 +1,22 @@
+{
+  "name": "brunch-arrogantular",
+  "homepage": "https://github.com/row1/brunch-arrogantular",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "angular-material": "~1.0.7",
+    "ui-router": "~0.2.15",
+    "angular-resource": "~1.4.3",
+    "components-font-awesome": "^4.6.3"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.4"
+  }
+}
