@@ -3,7 +3,17 @@ body {
     margin: 0px;
 }
 
+md-toast {
+    bottom: auto;
+    top: 0px;
+}
+
 md-content.home {
+    .config-region {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
     .camera-region {
         background: #352e3b;
         button {
@@ -27,14 +37,13 @@ md-content.home {
                 height: 60px;
             }
             i {
-                margin-left: 10px;
                 font-size: 65px;
             }
         }
         @media (min-width: 500px) {
             background: transparent;
             position: absolute;
-            bottom: 20px;
+            bottom: 80px;
             right: 20px;
         }
     }

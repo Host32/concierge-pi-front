@@ -4,7 +4,8 @@
     var dependencies = [
         'ngMaterial',
         'templates',
-        'app.home'
+        'app.home',
+        'app.services'
     ];
 
     angular.module('app', dependencies)
@@ -13,7 +14,7 @@
 
             $mdThemingProvider.theme('default')
                 .primaryPalette('teal')
-                .accentPalette('teal');
+                .accentPalette('blue');
 
             $mdThemingProvider.theme('red')
                 .primaryPalette('red')
@@ -21,7 +22,7 @@
 
             $mdThemingProvider.theme('light-green')
                 .primaryPalette('light-green')
-                .accentPalette('light-green');
+                .accentPalette('blue');
         }])
         .run(['$rootScope', '$state', '$stateParams', function ($rootScope, $state, $stateParams) {
             $rootScope.$state = $state;

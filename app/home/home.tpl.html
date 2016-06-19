@@ -1,20 +1,34 @@
-<div flex class="camera-region" layout="row" layout-align="center center">
-    <md-button class="md-fab md-primary" aria-label="Eat cake">
+<div class="config-region">
+
+    <md-menu>
+        <md-button aria-label="Settings" class="md-icon-button md-primary" ng-click="openMenu($mdOpenMenu, $event)">
+            <i class="fa fa-gear"></i>
+        </md-button>
+        <md-menu-content width="4">
+            <md-menu-item>
+                <md-button ng-click="openGate()">
+                    Abrir o portão
+                </md-button>
+            </md-menu-item>
+            <md-menu-item>
+                <md-button disabled="disabled" ng-click="ctrl.checkVoicemail()">
+                    Check voicemail
+                </md-button>
+            </md-menu-item>
+        </md-menu-content>
+    </md-menu>
+</div>
+<div flex class="camera-region" layout="row" layout-align="center center" id="cameraRegion">
+    <md-button class="md-fab md-primary" aria-label="Eat cake" ng-if="!stream" ng-click="toggleStream()">
         <i class="fa fa-camera"></i>
     </md-button>
+    <video ng-click="toggleStream()" widht="{{calcVideoWidth()}}" height="{{calcVideoHeight()}}" ng-src="{{trustSrc(streamUrl)}}" ng-if="stream" autoplay controls></video>
 </div>
 <div flex class="audio-region" layout="column" layout-align="center center">
     <div flex class="audio-play" layout="column" layout-align="center center">
-        <md-button class="md-fab md-hue-2" md-theme="red" aria-label="Eat cake">
-            <i class="fa fa-play"></i>
-        </md-button>
-    </div>
-    <div flex>
-        <md-button class="md-fab md-primary" md-theme="light-green" aria-label="Eat cake">
-            <i class="fa fa-volume-up"></i>
-        </md-button>
-        <md-button class="md-fab md-primary" md-theme="light-green" aria-label="Eat cake">
-            <i class="fa fa-microphone"></i>
+        <md-button ng-click="toggleMic()" class="md-fab md-hue-2" md-theme="red" aria-label="Play">
+            <i class="fa fa-microphone" ng-if="!mic"></i>
+            <i class="fa fa-microphone-slash" ng-if="mic"></i>
         </md-button>
     </div>
 </div>
