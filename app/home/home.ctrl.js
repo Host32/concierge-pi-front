@@ -35,9 +35,18 @@
 
             $scope.toggleStream = function () {
                 $scope.stream = !$scope.stream;
+
+                if (!$scope.stream) {
+                    var element = document.getElementById('video');
+                    element.pause();
+                    element.src = "";
+                    element.remove();
+                }
             };
 
-            $scope.streamUrl = concierge.getStreamUrl();
+            $scope.streamUrl = function () {
+                return concierge.getStreamUrl();
+            };
 
             $scope.calcVideoHeight = function () {
                 if ($window.screen.height < $window.screen.width) {
@@ -47,6 +56,10 @@
             };
             $scope.calcVideoWidth = function () {
                 return $window.screen.width + "px";
+            };
+
+            $scope.config = function () {
+                concierge.showConfig();
             };
         }]);
 }());

@@ -1,0 +1,24 @@
+<md-dialog aria-label="Configurations" style="padding:20px;">
+    <form>
+        <md-content>
+            <h2>Configurações</h2>
+            <md-input-container class="md-block">
+                <label>IP do porteiro</label>
+                <input ng-model="config.serverIP">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>Porta dos botoes</label>
+                <input ng-model="config.socketPort">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>Porta do autofalante</label>
+                <input ng-model="config.streamPort">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>Porta de stream</label>
+                <input ng-model="config.speakerPort">
+            </md-input-container>
+            <md-button class="md-raised md-primary" ng-click="save()">Salvar</md-button>
+        </md-content>
+    </form>
+</md-dialog>

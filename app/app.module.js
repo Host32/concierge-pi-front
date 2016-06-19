@@ -17,7 +17,7 @@
                 .accentPalette('blue');
 
             $mdThemingProvider.theme('red')
-                .primaryPalette('red')
+                .primaryPalette('blue')
                 .accentPalette('red');
 
             $mdThemingProvider.theme('light-green')

@@ -11,8 +11,8 @@
                 </md-button>
             </md-menu-item>
             <md-menu-item>
-                <md-button disabled="disabled" ng-click="ctrl.checkVoicemail()">
-                    Check voicemail
+                <md-button ng-click="config()">
+                    Configurações
                 </md-button>
             </md-menu-item>
         </md-menu-content>
@@ -22,7 +22,7 @@
     <md-button class="md-fab md-primary" aria-label="Eat cake" ng-if="!stream" ng-click="toggleStream()">
         <i class="fa fa-camera"></i>
     </md-button>
-    <video ng-click="toggleStream()" widht="{{calcVideoWidth()}}" height="{{calcVideoHeight()}}" ng-src="{{trustSrc(streamUrl)}}" ng-if="stream" autoplay controls></video>
+    <video id="video" ng-click="toggleStream()" widht="{{calcVideoWidth()}}" height="{{calcVideoHeight()}}" ng-src="{{trustSrc(streamUrl())}}" ng-if="stream" autoplay controls></video>
 </div>
 <div flex class="audio-region" layout="column" layout-align="center center">
     <div flex class="audio-play" layout="column" layout-align="center center">

@@ -21,13 +21,16 @@
                     gate.open(socket);
                 },
                 getStreamUrl: function () {
-                    return config.getServerStreamingAddres();
+                    return config.getServerStreamAddres();
                 },
                 activateSpeaker: function () {
                     speaker.play();
                 },
                 desactivateSpeaker: function () {
                     speaker.stop();
+                },
+                showConfig: function () {
+                    config.showDialog();
                 }
             };
         }]);
