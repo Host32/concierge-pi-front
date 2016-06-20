@@ -7,5 +7,9 @@
 <name>congierge-pi</name>
 <content src="index.html"/>
 <access origin="*"/>
+<intelxdk:plugin intelxdk:name="File" intelxdk:value="cordova-plugin-file" intelxdk:version="4.1.0" intelxdk:checksum="77b7c7b6" intelxdk:type="file"/>
+<intelxdk:plugin intelxdk:name="Capture" intelxdk:value="cordova-plugin-media-capture" intelxdk:version="1.2.0" intelxdk:checksum="fc48736e" intelxdk:type="file"/>
 <!--creationInfo:{"src":"","projectTypeName":"com.intel.xdk.projecttype.jsapp"}-->
-<preference name="debuggable" value="false"/></widget>
+<preference name="debuggable" value="true"/>
+<intelxdk:crosswall xmlns:intelxdk="http://xdk.intel.com/ns/v1" xwalk-comand-line="--disable-pull-to-refresh-effect"/>
+<intelxdk:crosswall xmlns:intelxdk="http://xdk.intel.com/ns/v1" xwalk-comand-line="--ignore-gpu-blacklist"/></widget>

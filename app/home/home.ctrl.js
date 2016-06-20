@@ -49,13 +49,14 @@
             };
 
             $scope.calcVideoHeight = function () {
-                if ($window.screen.height < $window.screen.width) {
-                    return ($window.screen.height - 20) + "px";
+
+                if ($window.innerHeight < $window.innerWidth) {
+                    return ($window.innerHeight - 20) + "px";
                 }
-                return ($window.screen.height / 2 - 10) + "px";
+                return ($window.innerHeight / 2 - 10) + "px";
             };
             $scope.calcVideoWidth = function () {
-                return $window.screen.width + "px";
+                return $window.innerWidth + "px";
             };
 
             $scope.config = function () {
